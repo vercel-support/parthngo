@@ -1,0 +1,1 @@
+{"ast":null,"code":"// Next.js API route support: https://nextjs.org/docs/api-routes/introduction\nimport initDB from '../../helpers/initDB';\nimport Product from '../../models/Product';\ninitDB();\nexport default ((req, res) => {\n  Product.find().then(products => {\n    res.status(200).json(products);\n  });\n});","map":null,"metadata":{},"sourceType":"module"}
